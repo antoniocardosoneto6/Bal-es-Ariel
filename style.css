@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;;
+}
+
+.dark-mode {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .card {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.parallax {
+  position:relative;
+  height: 100vh;
+  background-image: url('img/balao-po.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.titulo h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 7rem;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 3;
+
+}
+
+.titulo p {
+  font-size: 2rem;
+  color: #f9f9f9;
+  margin-top: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.balao {
+  position: absolute;
+  width: 500px;
+  transition: transform 0.8s;
+  z-index: 1;
+}
+
+.balao1 { top: -1%; left: 2%; }
+.balao2 { top: -1%; right: 5%; }
+.balao3 { top: -2%; left: 10%; }
+.balao4 { bottom: 5%; right: 50%;}
+.balao5 { bottom: 5%; right: 16%;}
+
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+  background: #f4f4f4;
+  
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.dark-mode .cards {
+  background:#181818;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ffffffaa;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .parallax .titulo h1 {
+    font-size: 2rem;
+  }
+  .card {
+    width: 90%;
+  }
+}
